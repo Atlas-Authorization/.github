@@ -4,7 +4,7 @@
 
 ### The open identity platform — authentication, authorization & user management for modern apps
 
-A complete, self-hostable alternative to Auth0 and Clerk: hosted & embeddable sign-in, organizations/B2B, SSO (SAML/OIDC), SCIM, passkeys & MFA, OAuth/OIDC provider, fine-grained authorization (FGA), machine identities, and a first-class SDK for every stack.
+A complete, developer-first alternative to Auth0 and Clerk: hosted & embeddable sign-in, organizations/B2B, SSO (SAML/OIDC), SCIM, passkeys & MFA, OAuth/OIDC provider, fine-grained authorization (FGA), machine identities, and a first-class SDK for every stack.
 
 [Docs](https://atlasauth.net/docs) · [API reference](https://api.atlasauth.net/v1/openapi.json) · [Dashboard](https://atlasauth.net) · [Connectors](https://atlasauth.net/connectors)
 
