@@ -76,6 +76,8 @@ Atlas speaks the OpenFGA wire protocol at `/v1/openfga`, so the stock OpenFGA SD
 ### Tooling & DX
 [`@atlasauth/cli`](https://www.npmjs.com/package/@atlasauth/cli) · [`create-atlas-app`](https://www.npmjs.com/package/@atlasauth/create-atlas-app) · [`@atlasauth/actions`](https://www.npmjs.com/package/@atlasauth/actions) (+ [atlas-actions](https://github.com/Atlas-Authorization/atlas-actions)) · [`agent-toolkit`](https://www.npmjs.com/package/@atlasauth/agent-toolkit) · [`mcp`](https://www.npmjs.com/package/@atlasauth/mcp) · [`msw`](https://www.npmjs.com/package/@atlasauth/msw) · [`testing`](https://www.npmjs.com/package/@atlasauth/testing) · [`eslint-plugin`](https://www.npmjs.com/package/@atlasauth/eslint-plugin) · [`upgrade`](https://www.npmjs.com/package/@atlasauth/upgrade) · [`jwt-decode`](https://www.npmjs.com/package/@atlasauth/jwt-decode) · [`cli-banner`](https://www.npmjs.com/package/@atlasauth/cli-banner)
 
+**Try the API:** [Postman collection](https://github.com/Atlas-Authorization/atlas-postman) (generated from the spec, 643 ops) · [OIDC/JWT playground](https://github.com/Atlas-Authorization/atlas-playground) · [quickstarts for every stack](https://github.com/orgs/Atlas-Authorization/repositories?q=quickstart)
+
 ---
 
 ## Why Atlas
