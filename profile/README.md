@@ -80,6 +80,18 @@ Atlas speaks the OpenFGA wire protocol at `/v1/openfga`, so the stock OpenFGA SD
 
 ---
 
+## Use Atlas with AI & your editor
+
+- **Claude Code plugin** — install the Atlas Agent Skills so Claude knows how to wire Atlas (sign-in setup, backend token verification, B2B SSO/SCIM, FGA, machine-to-machine, Clerk/Auth0 migration):
+  ```
+  /plugin marketplace add Atlas-Authorization/atlas-claude-skills
+  /plugin install atlas-auth@atlas
+  ```
+- **MCP server** — [`@atlasauth/mcp`](https://www.npmjs.com/package/@atlasauth/mcp): point any MCP client (Claude, Cursor, …) at your instance — `npx -y @atlasauth/mcp` with `ATLAS_SECRET_KEY` (read-only by default).
+- **llms.txt** — AI tools can ingest the docs at [atlasauth.net/llms.txt](https://atlasauth.net/llms.txt) (curated index) and [llms-full.txt](https://atlasauth.net/llms-full.txt) (the full docs in one file).
+- **Scaffold & CLI** — `npm create @atlasauth/atlas-app@latest` ([create-atlas-app](https://www.npmjs.com/package/@atlasauth/create-atlas-app)) · [`@atlasauth/cli`](https://www.npmjs.com/package/@atlasauth/cli).
+- **Agent guide** — [Add Atlas to your app — a guide for AI agents](https://atlasauth.net/docs/add-atlas-with-an-ai-agent).
+
 ## Why Atlas
 
 - **Full auth surface** — passwords, email/SMS codes & magic links, passkeys/WebAuthn, TOTP/SMS/push MFA, social & enterprise connections, step-up & adaptive MFA.
