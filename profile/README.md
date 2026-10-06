@@ -87,6 +87,7 @@ Atlas speaks the OpenFGA wire protocol at `/v1/openfga`, so the stock OpenFGA SD
   /plugin marketplace add Atlas-Authorization/atlas-claude-skills
   /plugin install atlas-auth@atlas
   ```
+- **Editor rules for any agent** — the [`atlas-ai-rules`](https://github.com/Atlas-Authorization/atlas-ai-rules) kit is one canonical `AGENTS.md` emitted into every harness's native format (Cursor, GitHub Copilot, Windsurf, Cline, Roo, Gemini CLI, Zed, Aider, Continue, JetBrains Junie — and any agent that reads [`AGENTS.md`](https://agents.md) directly, e.g. Codex). Run `./install.sh` and it auto-detects your editor and drops the right file into your project.
 - **MCP server** — [`@atlasauth/mcp`](https://www.npmjs.com/package/@atlasauth/mcp): point any MCP client (Claude, Cursor, …) at your instance — `npx -y @atlasauth/mcp` with `ATLAS_SECRET_KEY` (read-only by default).
 - **llms.txt** — AI tools can ingest the docs at [atlasauth.net/llms.txt](https://atlasauth.net/llms.txt) (curated index) and [llms-full.txt](https://atlasauth.net/llms-full.txt) (the full docs in one file).
 - **Scaffold & CLI** — `npm create @atlasauth/atlas-app@latest` ([create-atlas-app](https://www.npmjs.com/package/@atlasauth/create-atlas-app)) · [`@atlasauth/cli`](https://www.npmjs.com/package/@atlasauth/cli).
