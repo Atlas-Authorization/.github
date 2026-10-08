@@ -102,6 +102,46 @@ Atlas speaks the OpenFGA wire protocol at `/v1/openfga`, so the stock OpenFGA SD
 - **Machine identities** — enrolment, per-machine keypairs, short-lived JWTs, scoped & proof-of-possession API keys.
 - **Migrate in, not out** — lazy/custom-database migration drains your old user store on first login.
 
+---
+
+## Proof-Carrying Authority (PCA) — auth for autonomous agents
+
+> **Preview.** A separate, research-grade framework from the Atlas team. APIs and wire formats may change.
+
+Bearer tokens answer "who are you?" (authN) and "what are you allowed to do?" (authZ). When an
+autonomous agent calls a tool, neither answers the question that actually matters: **is _this_ call
+a faithful execution of the authority the agent was given?** PCA (**authF**) answers it. Every tool
+call carries a signed, self-describing **proof-carrying action** that the resource verifies
+**offline** — no callback to an auth server — before it acts.
+
+```
+authN  — who are you?
+authZ  — what are you allowed to do?
+authF  — is THIS action faithful to the authority you were granted?   ← PCA
+```
+
+- **Flagship — [`pca`](https://github.com/Atlas-Authorization/pca)** — the normative framework: the
+  PCActn model, the verification algorithm, the `@atlasauth/pca-*` TypeScript packages (verifier,
+  agent/framework adapters, standards bridges, frontier crypto), the written docs & diagrams, and
+  the language-neutral **conformance vectors** every implementation is tested against. Start here →
+  [ECOSYSTEM.md](https://github.com/Atlas-Authorization/pca/blob/main/ECOSYSTEM.md).
+- **Native verifiers (9 languages)** — a dependency-light, offline PCActn verifier for each stack,
+  all passing the same conformance vectors:
+  [go](https://github.com/Atlas-Authorization/pca-go) ·
+  [python](https://github.com/Atlas-Authorization/pca-python) ·
+  [rust](https://github.com/Atlas-Authorization/pca-rust) ·
+  [java](https://github.com/Atlas-Authorization/pca-java) ·
+  [php](https://github.com/Atlas-Authorization/pca-php) ·
+  [ruby](https://github.com/Atlas-Authorization/pca-ruby) ·
+  [dotnet](https://github.com/Atlas-Authorization/pca-dotnet) ·
+  [kotlin](https://github.com/Atlas-Authorization/pca-kotlin) ·
+  [swift](https://github.com/Atlas-Authorization/pca-swift)
+- **Language ecosystems** beyond plain verification —
+  [`pca-python`](https://github.com/Atlas-Authorization/pca-python) adds framework tool-guards
+  (CrewAI, FastMCP, Pydantic AI, LangGraph, Google ADK, Haystack, MS Agent Framework);
+  [`pca-rust`](https://github.com/Atlas-Authorization/pca-rust) adds the heavy-crypto track
+  (STARK, zkVM/RISC Zero, Nova/HyperNova folding IVC).
+
 <div align="center">
 
 **[Read the docs →](https://atlasauth.net/docs)**
